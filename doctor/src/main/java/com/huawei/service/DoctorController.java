@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.huawei.db.BodyProblemRepository;
+import com.huawei.db.HeathDataRepository;
+import com.huawei.db.SicknessProcessRepository;
 import com.huawei.db.UserRepository;
 import com.huawei.model.HeathData;
 import com.huawei.model.User;
@@ -138,24 +141,34 @@ public class DoctorController {
 		
 	
 	// #region test
+	
 	@Autowired
-	private UserRepository repository;
+	public static UserRepository userRepo;
+	
+	@Autowired
+	public static SicknessProcessRepository sicknessRepo;
+		
+	@Autowired
+	public static HeathDataRepository hdRepo;
+	
+	@Autowired
+	public static BodyProblemRepository bpRepo;
 	
 	@RequestMapping("test")
     @ResponseBody
 	public String test(){
-		this.repository.deleteAll();
+		userRepo.deleteAll();
 
 		// save a couple of customers
-		this.repository.save(new User("zxc", "man", 30));
-		this.repository.save(new User("vivi", "female", 28));
+		userRepo.save(new User("zxc", "man", 30));
+		userRepo.save(new User("vivi", "female", 28));
 
 		// fetch all customers
 		System.out.println("User found with findAll():");
 		System.out.println("-------------------------------");
 		
 		String res = "";
-		for (User user : this.repository.findAll()) {
+		for (User user : userRepo.findAll()) {
 			res += user.toString();
 		}
 		
