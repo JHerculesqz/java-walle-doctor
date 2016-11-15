@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.huawei._1_model.body_pro.BodyProblem;
+
 @Controller
 @EnableAutoConfiguration
 public class ProblemController {
@@ -41,8 +43,8 @@ public class ProblemController {
 	 */
 	@RequestMapping("doctor/problem/queryProblem")
 	@ResponseBody
-	public void queryProblem(@RequestBody String strProblemQuestion) {
-		problemService.queryProblem(strProblemQuestion);
+	public BodyProblem queryProblem(@RequestBody String strProblemQuestion) {
+		return problemService.queryProblem(strProblemQuestion);
 	}
 
 	// #endregion

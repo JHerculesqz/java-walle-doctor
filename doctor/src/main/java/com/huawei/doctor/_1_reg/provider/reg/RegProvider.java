@@ -7,7 +7,10 @@ public class RegProvider {
 	// #region saveUserInfo
 
 	public static String saveUserInfo(User oUser, UserRepository oUserRepository) {
-		return null;
+		// 1.将用户信息入库
+		oUserRepository.save(oUser);
+		
+		return "success";
 	}
 
 	// #endregion

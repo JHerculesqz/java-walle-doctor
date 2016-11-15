@@ -3,6 +3,7 @@ package com.huawei.doctor._4_problem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.huawei._1_model.body_pro.BodyProblem;
 import com.huawei._1_model.body_pro.BodyProblemRepository;
 import com.huawei.doctor._4_problem.provider.MainProvider;
 
@@ -25,8 +26,8 @@ public class ProblemService {
 
 	// #region queryProblem
 
-	public void queryProblem(String strProblemQuestion) {
-		MainProvider.queryProblem(strProblemQuestion, bpRepo);
+	public BodyProblem queryProblem(String strProblemQuestion) {
+		return MainProvider.queryProblem(strProblemQuestion, bpRepo);
 	}
 
 	// #endregion
