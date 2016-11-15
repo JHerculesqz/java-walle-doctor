@@ -3,7 +3,7 @@ server:
   
 systemLog:
    destination: file
-   path: "D:/log/mongodb/mongod.log"
+   path: "C:/log/mongodb/mongod.log"
    logAppend: true
 storage:
    journal:
