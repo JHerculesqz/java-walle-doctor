@@ -1,7 +1,5 @@
 package com.huawei._1_model.body_pro;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 
 /**
@@ -17,7 +15,7 @@ public class BodyProblem {
 	// #region Fields
 	
 	// 检索关键字列表
-	private List<String> lstKeyWord;
+	private String keyWord;
 	
 	// 问题答案
 	private String answer;
@@ -26,12 +24,12 @@ public class BodyProblem {
 	
 	// #region getter/setter
 
-	public List<String> getLstKeyWord() {
-		return lstKeyWord;
+	public String getKeyWord() {
+		return keyWord;
 	}
 
-	public void setLstKeyWord(List<String> lstKeyWord) {
-		this.lstKeyWord = lstKeyWord;
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
 	}
 
 	public String getAnswer() {

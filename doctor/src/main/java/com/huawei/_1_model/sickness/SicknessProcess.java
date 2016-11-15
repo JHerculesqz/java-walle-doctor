@@ -16,6 +16,8 @@ public class SicknessProcess {
 
 	// #region Fields
 	
+	private String userName;
+	
 	// ¼²²¡Ãû³Æ 
 	private String sickness;
 	
@@ -31,6 +33,14 @@ public class SicknessProcess {
 	// #endregion
 	
 	// #region getter/setter
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
 	public String getSickness() {
 		return sickness;
@@ -71,7 +81,8 @@ public class SicknessProcess {
 	public SicknessProcess(){
 	}
 	
-	public SicknessProcess(String sickness){
+	public SicknessProcess(String userName, String sickness){
+		this.userName = userName;
 		this.sickness = sickness;
 	}
 	

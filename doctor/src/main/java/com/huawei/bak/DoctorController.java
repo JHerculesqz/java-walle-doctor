@@ -147,34 +147,35 @@ public class DoctorController {
 	// #region test
 
 	@Autowired
-	public static UserRepository userRepo;
+	public UserRepository userRepo;
 
 	@Autowired
-	public static SicknessProcessRepository sicknessRepo;
+	public SicknessProcessRepository sicknessRepo;
 
 	@Autowired
-	public static HealthDataRepository hdRepo;
+	public HealthDataRepository hdRepo;
 
 	@Autowired
-	public static BodyProblemRepository bpRepo;
+	public BodyProblemRepository bpRepo;
 
 	@RequestMapping("test")
 	@ResponseBody
 	public String test() {
-		userRepo.deleteAll();
+		this.userRepo.deleteAll();
 
 		// save a couple of customers
-		userRepo.save(new User("zxc", "man", 30));
-		userRepo.save(new User("vivi", "female", 28));
+		this.userRepo.save(new User("zxc", "man", 30));
+		this.userRepo.save(new User("vivi", "female", 28));
 
 		// fetch all customers
 		System.out.println("User found with findAll():");
 		System.out.println("-------------------------------");
 
 		String res = "";
-		for (User user : userRepo.findAll()) {
+		for (User user : this.userRepo.findAll()) {
 			res += user.toString();
 		}
+		System.out.println(res);
 
 		return res;
 	}
