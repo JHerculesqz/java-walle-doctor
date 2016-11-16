@@ -43,9 +43,14 @@ public class BodyProblem {
 	// #endregion
 	
 	// #region Constructor
-	
+
 	public BodyProblem(){
 		
+	}
+	
+	public BodyProblem(String keyWord, String answer){
+		this.keyWord = keyWord;
+		this.answer = answer;
 	}
 	
 	// #endregion

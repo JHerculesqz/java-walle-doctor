@@ -4,4 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface SicknessProcessRepository extends MongoRepository<SicknessProcess, String>{
 	public SicknessProcess findByUserName(String userName);
+	
+	public SicknessProcess findBySickness(String sickness);
 }
