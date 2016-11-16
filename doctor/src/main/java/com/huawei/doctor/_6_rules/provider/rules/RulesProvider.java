@@ -14,16 +14,11 @@ public class RulesProvider {
 		// 1.用户的每一种疾病，都在疾病辅导流程库中添加一条记录
 		List<String> lstSickness = oUser.getLstSickness();
 		for (String sickness : lstSickness) {
-			SicknessProcess oSicknessProcess = oSicknessProcessRepository.findBySickness(sickness);
-			// 1.1.疾病辅导流程库中没有该疾病，则伪造一条辅导流程记录
-			if (null == oSicknessProcess) {
-				oSicknessProcess = fakeSicknessProcess(sickness);
-			}
-
-			// 1.2.为该用户创建一条辅导流程（应该可以直接使用oSicknessProcess？）
+			// 1.1.伪造一条该用户的疾病辅导流程方案
+			SicknessProcess oSicknessProcess = fakeSicknessProcess(sickness);
 			oSicknessProcess.setUserName(oUser.getName());
 
-			// 1.3.该用户的疾病辅导流程入库
+			// 1.2.该用户的疾病辅导流程入库
 			oSicknessProcessRepository.save(oSicknessProcess);
 		}
 	}
