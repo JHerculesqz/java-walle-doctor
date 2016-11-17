@@ -27,7 +27,7 @@ public class User {
 	private String sex;
 	
 	// 年龄
-	private int age;
+	private String age;
 	
 	// 健康数据列表
 	private List<HeathData> lstHeathData;
@@ -55,11 +55,11 @@ public class User {
 		this.sex = sex;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -95,7 +95,7 @@ public class User {
 		
 	}
 	
-	public User(String name, String sex, int age) {
+	public User(String name, String sex, String age) {
 		this.name = name;
 		this.sex = sex;
 		this.age = age;

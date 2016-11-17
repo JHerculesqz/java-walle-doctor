@@ -28,7 +28,7 @@ public class RegController {
 	 */
 	@RequestMapping("doctor/login/saveUserInfo")
 	@ResponseBody
-	public String saveUserInfo(@RequestBody User oUser) {
+	public User saveUserInfo(@RequestBody User oUser) {
 		return regService.saveUserInfo(oUser);
 	}
 

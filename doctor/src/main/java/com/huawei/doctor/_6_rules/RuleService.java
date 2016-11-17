@@ -12,7 +12,7 @@ public class RuleService {
 	// #region Fields
 
 	@Autowired
-	public static SicknessProcessRepository sicknessRepo;
+	public SicknessProcessRepository sicknessRepo;
 
 	// #endregion
 

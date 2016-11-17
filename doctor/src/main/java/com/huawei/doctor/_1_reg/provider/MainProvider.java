@@ -7,7 +7,7 @@ import com.huawei.doctor._1_reg.provider.reg.RegProvider;
 public class MainProvider {
 	// #region saveUserInfo
 
-	public static String saveUserInfo(User oUser, UserRepository oUserRepository) {
+	public static User saveUserInfo(User oUser, UserRepository oUserRepository) {
 		return RegProvider.saveUserInfo(oUser, oUserRepository);
 	}
 

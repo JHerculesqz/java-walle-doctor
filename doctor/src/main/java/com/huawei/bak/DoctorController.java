@@ -164,8 +164,8 @@ public class DoctorController {
 		this.userRepo.deleteAll();
 
 		// save a couple of customers
-		this.userRepo.save(new User("zxc", "man", 30));
-		this.userRepo.save(new User("vivi", "female", 28));
+		this.userRepo.save(new User("zxc", "man", "30"));
+		this.userRepo.save(new User("vivi", "female", "28"));
 
 		// fetch all customers
 		System.out.println("User found with findAll():");

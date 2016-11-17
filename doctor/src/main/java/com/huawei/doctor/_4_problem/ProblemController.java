@@ -28,8 +28,8 @@ public class ProblemController {
 	 */
 	@RequestMapping("doctor/problem/updateProblems")
 	@ResponseBody
-	public void updateProblems(@RequestBody String strProblemKeyword) {
-		problemService.updateProblems(strProblemKeyword);
+	public BodyProblem updateProblems(@RequestBody BodyProblem oBodyProblem) {
+		return problemService.updateProblems(oBodyProblem.getKeyWord());
 	}
 
 	// #endregion
@@ -43,8 +43,8 @@ public class ProblemController {
 	 */
 	@RequestMapping("doctor/problem/queryProblem")
 	@ResponseBody
-	public BodyProblem queryProblem(@RequestBody String strProblemQuestion) {
-		return problemService.queryProblem(strProblemQuestion);
+	public BodyProblem queryProblem(@RequestBody BodyProblem oBodyProblem) {
+		return problemService.queryProblem(oBodyProblem.getKeyWord());
 	}
 
 	// #endregion

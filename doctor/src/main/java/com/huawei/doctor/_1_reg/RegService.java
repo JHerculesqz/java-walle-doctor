@@ -12,13 +12,13 @@ public class RegService {
 	// #region Fields
 
 	@Autowired
-	public static UserRepository userRepo;
+	public UserRepository userRepo;
 
 	// #endregion
 
 	// #region saveUserInfo
 
-	public String saveUserInfo(User oUser) {
+	public User saveUserInfo(User oUser) {
 		return MainProvider.saveUserInfo(oUser, userRepo);
 	}
 

@@ -1,6 +1,7 @@
 package com.huawei.doctor._4_problem;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
 import com.huawei._1_model.body_pro.BodyProblem;
@@ -12,14 +13,17 @@ public class ProblemService {
 	// #region Fields
 
 	@Autowired
-	public static BodyProblemRepository bpRepo;
+	public BodyProblemRepository bpRepo;
+
+	@Autowired
+	public MongoTemplate mongoTemplate;
 
 	// #endregion
 
 	// #region updateProblems
 
-	public void updateProblems(String strProblemKeyword) {
-		MainProvider.updateProblems(strProblemKeyword, bpRepo);
+	public BodyProblem updateProblems(String strProblemKeyword) {
+		return MainProvider.updateProblems(strProblemKeyword, bpRepo, mongoTemplate);
 	}
 
 	// #endregion
@@ -27,7 +31,7 @@ public class ProblemService {
 	// #region queryProblem
 
 	public BodyProblem queryProblem(String strProblemQuestion) {
-		return MainProvider.queryProblem(strProblemQuestion, bpRepo);
+		return MainProvider.queryProblem(strProblemQuestion, bpRepo, mongoTemplate);
 	}
 
 	// #endregion

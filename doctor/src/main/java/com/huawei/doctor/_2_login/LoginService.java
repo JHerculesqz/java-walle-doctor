@@ -12,7 +12,7 @@ public class LoginService {
 	// #region Fields
 
 	@Autowired
-	public static UserRepository userRepo;
+	public UserRepository userRepo;
 
 	// #endregion
 
