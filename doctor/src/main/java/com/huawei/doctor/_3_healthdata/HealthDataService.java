@@ -13,9 +13,6 @@ public class HealthDataService {
 	// #region Fields
 
 	@Autowired
-	private UserRepository userRepo;
-
-	@Autowired
 	private HealthDataRepository healthDataRepo;
 
 	// #endregion
@@ -23,7 +20,7 @@ public class HealthDataService {
 	// #region setOneHealthData
 
 	public void setOneHealthData(User oUser) {
-		MainProvider.setOneHealthData(oUser, userRepo, healthDataRepo);
+		MainProvider.setOneHealthData(oUser, healthDataRepo);
 	}
 
 	// #endregion
