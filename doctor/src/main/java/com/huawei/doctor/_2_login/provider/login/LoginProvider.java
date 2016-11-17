@@ -7,6 +7,7 @@ public class LoginProvider {
 	// #region queryUserInfo
 
 	public static User queryUserInfo(String strName, UserRepository oUserRepository) {
+		
 		return oUserRepository.findByName(strName);
 	}
 

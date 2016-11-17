@@ -29,8 +29,8 @@ public class LoginController {
 	 */
 	@RequestMapping("doctor/login/queryUserInfo")
 	@ResponseBody
-	public User queryUserInfo(@RequestBody String strName) {
-		return loginService.queryUserInfo(strName);
+	public User queryUserInfo(@RequestBody User oUser) {
+		return loginService.queryUserInfo(oUser.getName());
 	}
 
 	// #endregion
