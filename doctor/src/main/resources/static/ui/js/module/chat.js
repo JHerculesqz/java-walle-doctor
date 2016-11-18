@@ -17,7 +17,6 @@
                 _this.STATIC_COMMAND = $.Reg.CONST_COMMAND;
                 $.Reg.init(strMsg, function () {
                     _this.STATIC_COMMAND = "";
-                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                 });
 
             }
@@ -25,14 +24,12 @@
                 _this.STATIC_COMMAND = $.Login.CONST_COMMAND;
                 $.Login.init(strMsg, function () {
                     _this.STATIC_COMMAND = "";
-                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                 });
             }
             else if (strMsg == $.BodyProblem.CONST_COMMAND || _this.STATIC_COMMAND == $.BodyProblem.CONST_COMMAND) {
                 _this.STATIC_COMMAND = $.BodyProblem.CONST_COMMAND;
                 $.BodyProblem.init(strMsg, function () {
                     _this.STATIC_COMMAND = "";
-                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                 });
             }
             else {
@@ -41,7 +38,7 @@
                     $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                 });
             }
-            $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
+
         }
     }
 

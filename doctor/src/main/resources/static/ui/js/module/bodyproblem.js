@@ -48,6 +48,7 @@
                     else {
                         $.Record.append(_this.STATIC_FAIL, false);
                     }
+                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                     $.Tools.refreshIframe();
                 },
                 function () {
@@ -65,6 +66,7 @@
                     else {
                         $.Record.append(_this.STATIC_FAIL, false);
                     }
+                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                     $.Tools.refreshIframe();
                 },
                 function () {

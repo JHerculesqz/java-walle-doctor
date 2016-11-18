@@ -38,7 +38,10 @@
         };
         //3.刷新iframe页面
         this.refreshIframe = function () {
-            $('#iframespeech').attr('src', $('#iframespeech').attr('src'));
+             $('#iframespeech').attr('src', $('#iframespeech').attr('src'));
+            // $('#iframespeech')[0].contentWindow.start();
+            $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
+
         }
     }
 
