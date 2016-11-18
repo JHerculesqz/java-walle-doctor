@@ -5,7 +5,7 @@
 
     var CBodyProblem = function () {
         // -1.CONST
-        this.CONST_COMMAND = "看病。";
+        this.CONST_COMMAND = "健康信息";
         // 0.data
         this.STATIC_INDEX = 0;
         this.STATIC_SUCCESS = "(⊙o⊙)…没学过，稍等，我马上学习";
@@ -48,7 +48,6 @@
                     else {
                         $.Record.append(_this.STATIC_FAIL, false);
                     }
-                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                     $.Tools.refreshIframe();
                 },
                 function () {
@@ -66,7 +65,6 @@
                     else {
                         $.Record.append(_this.STATIC_FAIL, false);
                     }
-                    $("#chatrecord").scrollTop($('#chatrecord')[0].scrollHeight);
                     $.Tools.refreshIframe();
                 },
                 function () {

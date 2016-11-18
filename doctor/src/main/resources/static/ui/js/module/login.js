@@ -5,7 +5,7 @@
 
     var CLogin = function () {
         // -1.CONST
-        this.CONST_COMMAND = "登录。";
+        this.CONST_COMMAND = "登录";
         // 0.data
         this.STATIC_INDEX = 0;
         this.STATIC_SUCCESS = "您已登录成功";

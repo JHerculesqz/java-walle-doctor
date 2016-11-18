@@ -10,6 +10,10 @@ $(function () {
         var strMsg=$("#iptbox").val();
         $.Chat.init(strMsg);
     });
+
+    $("#imgmp").on("click",function () {
+        $('#iframespeech')[0].contentWindow.start();
+    });
 });
 
 /**

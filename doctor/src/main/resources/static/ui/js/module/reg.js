@@ -5,7 +5,7 @@
 
     var CReg = function () {
         // -1.CONST
-        this.CONST_COMMAND = "注册。";
+        this.CONST_COMMAND = "注册";
         //0.index
         this.STATIC_INDEX = 0;
         //1.command
