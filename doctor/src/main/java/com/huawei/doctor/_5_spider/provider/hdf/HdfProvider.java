@@ -10,9 +10,11 @@ import com.huawei.doctor._5_spider.provider.vo.SpiderQuesAnsVo;
 
 public class HdfProvider {
 	// #region Const
-
+	
 	public static final String KEY_WORD_1 = "ÐÄÔà²¡";
-
+	
+	public static final String KEY_WORD_2= "¸ßÑªÑ¹";
+	
 	// #endregion
 
 	// #region spiderQuestionAndAnswer
@@ -24,7 +26,9 @@ public class HdfProvider {
 		if (strQuestionKeyWord.equals(HdfProvider.KEY_WORD_1)) {
 			SpiderUtils.run("C:\\z.doctor_test", "http://dengyz.haodf.com/lanmu", "http://www.haodf.com/");
 		}
-
+		else if(strQuestionKeyWord.equals(HdfProvider.KEY_WORD_2)){
+			SpiderUtils.run("C:\\z.doctor_test", "http://drtaobo.haodf.com/lanmu", "http://www.haodf.com/");
+		}
 		// 2.parse result
 		List<SpiderResVo> lstSpiderResVo = SpiderUtils.getResult();
 		for (SpiderResVo oSpiderResVo : lstSpiderResVo) {
